@@ -9,8 +9,12 @@ import 'package:auth/src/infra/Api/auth_api_contract.dart';
 class EmailAuth implements IAuthService, ISignUpService{
 
 final IAuthApi _api;
-Credential _credential;
+late Credential _credential;
 EmailAuth(this._api);
+
+void credential({required String email, required String password}){
+  _credential = Credential(type: AuthType.email, email: email, password: password);
+}
 
   @override
   Future<Result<Token>> signIn() async {
