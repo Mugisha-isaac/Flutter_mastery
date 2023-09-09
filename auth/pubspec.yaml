@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_sign_in: ^4.5.1
+  google_sign_in: ^6.1.5
   http: ^0.12.1
 
 dev_dependencies:
